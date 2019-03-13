@@ -1,0 +1,12 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parseOptions": {
+        "ecmaVerions": 6
+    },
+    "rules": {
+        "semi": "error"
+    }
+}
