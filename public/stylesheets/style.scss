@@ -1,15 +1,20 @@
+@font-face {
+    font-family: "MyOpenSanFont";
+    src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px "MyOpenSanFont", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 .my {
 
-  .social-links {
-    padding: 10px;
-  }
+    .social-links {
+        padding: 10px;
+    }
 
 }
