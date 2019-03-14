@@ -11,10 +11,4 @@ a {
     color: #00B7FF;
 }
 
-.my {
-
-    .social-links {
-        padding: 10px;
-    }
-
-}
+@import '../components/myProfile/base.scss';

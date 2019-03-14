@@ -1,23 +1,16 @@
 'use strict';
 
+// JS bucket
 import $ from 'jquery';
 
+// CSS bucket
 import '../stylesheets/style.scss';
-import MyLogo from '../images/logo-edmondwang.svg';
+
+// Component bucket
+import MyProfile from '../components/myProfile/index';
 
 console.log('Hello webpack');
 
-function component() {
-    var element = document.createElement('div');
-    element.classList.add('my');
-
-    var myLogoImg = new Image();
-    myLogoImg.src = MyLogo;
-    element.appendChild(myLogoImg);
-
-    return element;
-}
-
 $(document).ready(function () {
-    document.body.appendChild(component());
+    document.body.appendChild(MyProfile());
 });
