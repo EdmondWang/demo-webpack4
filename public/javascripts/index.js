@@ -1,6 +1,8 @@
 'use strict';
 
-import '../stylesheets/style.css';
+import $ from 'jquery';
+
+import '../stylesheets/style.scss';
 import MyLogo from '../images/logo-edmondwang.svg';
 
 console.log('Hello webpack');
@@ -16,4 +18,6 @@ function component() {
     return element;
 }
 
-document.body.appendChild(component());
+$(document).ready(function () {
+    document.body.appendChild(component());
+});

@@ -14,6 +14,13 @@ module.exports = {
                 'css-loader' // translate CSS into Common JS
             ]
         }, {
+            test: /\.scss/,
+            use: [
+                'style-loader',
+                'css-loader',
+                'sass-loader'
+            ]
+        }, {
             test: /\.(png|svg|jpg|gif)$/,
             use: [
                 'file-loader'
