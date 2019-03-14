@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "webpack": "webpack"
+    "server": "node ./bin/www",
+    "watch": "webpack --watch",
+    "build": "webpack"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -25,6 +26,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
+    "webpack-dev-middleware": "^3.6.1",
     "webpack-manifest-plugin": "^2.0.4"
   }
 }

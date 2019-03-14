@@ -13,6 +13,7 @@ function component() {
     var btn = document.createElement('button');
     var text = document.createTextNode('Update');
     btn.onclick = function (evt) {
+        console.log('Button get clicked');
         console.log(evt);
     };
     btn.appendChild(text);
