@@ -10,6 +10,15 @@ function component() {
     myLogoImg.src = MyLogo;
     element.appendChild(myLogoImg);
 
+    var btn = document.createElement('button');
+    var text = document.createTextNode('Update');
+    btn.onclick = function (evt) {
+        console.log(evt);
+    };
+    btn.appendChild(text);
+
+    element.appendChild(btn);
+
     return element;
 }
 
