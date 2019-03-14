@@ -4,10 +4,10 @@
 import $ from 'jquery';
 
 // CSS bucket
-import '../stylesheets/style.scss';
+import '../../stylesheets/style.scss';
 
 // Component bucket
-import MyProfile from '../components/myProfile/index';
+import MyProfile from '../../components/myProfile/index';
 
 console.log('Hello webpack');
 

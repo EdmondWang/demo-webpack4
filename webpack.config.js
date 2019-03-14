@@ -1,10 +1,13 @@
 const path = require('path');
 
 module.exports = {
-    entry: './public/javascripts/index.js',
+    entry: {
+        'indexPage': './public/javascripts/pages/index.js',
+        'common': './public/javascripts/common.js'
+    },
     output: {
         path: path.resolve(__dirname, 'public-dist'),
-        filename: 'my-bundle.js'
+        filename: '[name].bundle.js'
     },
     module: {
         rules: [{
