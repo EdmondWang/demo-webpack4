@@ -1,3 +1,5 @@
+console.log(process.env.NODE_ENV);
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -11,12 +13,12 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 const app = express();
-const webpackCfg = require('./webpack.config.js');
-const webpackcCfgompiler = webpack(webpackCfg);
+const webpackCfg = process.env.NODE_ENV === 'production' ? require('./webpack.prod.js') : require('./webpack.dev.js');
+const webpackCfgCompiler = webpack(webpackCfg);
 
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js
 // configuration file as a base.
-app.use(webpackDevMiddleware(webpackcCfgompiler, {
+app.use(webpackDevMiddleware(webpackCfgCompiler, {
   publicPath: webpackCfg.output.publicPath
 }));
 

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "server": "node ./bin/www",
+    "local": "NODE_ENV='development' node ./bin/www",
+    "product": "NODE_ENV='production' node ./bin/www",
     "watch": "webpack --watch",
     "build": "webpack"
   },
@@ -27,6 +28,7 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-middleware": "^3.6.1",
-    "webpack-manifest-plugin": "^2.0.4"
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-merge": "^4.2.1"
   }
 }

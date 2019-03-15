@@ -3,7 +3,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: {
         'indexPage': './public/javascripts/pages/index.js',
         'common': './public/javascripts/common.js'
@@ -13,7 +12,6 @@ module.exports = {
         filename: '[name].bundle.js',
         publicPath: '/' // used to tell express server how to server webpack output files
     },
-    devtool: 'inline-source-map',
     module: {
         rules: [{
             test: /\.css$/,
