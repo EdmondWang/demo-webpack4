@@ -1,6 +1,7 @@
 'use strict';
 
 import MyLogo from './logo-edmondwang.svg';
+import './base.scss';
 
 function component() {
     var element = document.createElement('div');
@@ -17,8 +18,19 @@ function component() {
         console.log(evt);
     };
     btn.appendChild(text);
-
     element.appendChild(btn);
+
+    var socialLinksDiv = document.createElement('div');
+    socialLinksDiv.classList.add('social-links');
+
+    var githubLink = document.createElement('a');
+    githubLink.href = 'http://edmondwang.github.io';
+    githubLink.target = '_blank';
+    githubLink.appendChild(document.createTextNode('Github'));
+
+    socialLinksDiv.appendChild(githubLink);
+
+    element.appendChild(socialLinksDiv);
 
     return element;
 }
