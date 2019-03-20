@@ -4,7 +4,8 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: {
-        'indexPage': './public/javascripts/pages/index.js',
+        'indexPage': './public/pages/indexPage.js',
+        'myProfilePage': './public/pages/myProfilePage.js',
         'common': './public/javascripts/common.js'
     },
     output: {
