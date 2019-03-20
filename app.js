@@ -10,7 +10,7 @@ const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const myProfileRouter = require('./routes/myProfile');
 
 const app = express();
 const webpackCfg = process.env.NODE_ENV === 'production' ? require('./webpack.prod.js') : require('./webpack.dev.js');
@@ -35,7 +35,7 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public-dist')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/my/profile/', myProfileRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

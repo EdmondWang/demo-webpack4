@@ -5,8 +5,8 @@
   "scripts": {
     "local": "NODE_ENV='development' node ./bin/www",
     "product": "NODE_ENV='production' node ./bin/www",
-    "watch": "webpack --watch",
-    "build": "webpack"
+    "watch": "webpack --config webpack.common.js --watch",
+    "build": "webpack --config webpack.common.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
