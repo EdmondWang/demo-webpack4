@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 const Visualizer = require('webpack-visualizer-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = merge(common, {
     mode: 'development',
@@ -9,6 +10,7 @@ module.exports = merge(common, {
     plugins: [
         new Visualizer({
             filename: './webpack-visualizer-stat.html'
-        })
+        }),
+        new BundleAnalyzerPlugin()
     ]
 });
